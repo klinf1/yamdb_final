@@ -1,3 +1,5 @@
+![workflow](https://github.com/klinf1/yamdb_final/actions/workflows/yamdb_workflow/badge.svg)
+
 # API_YAMDB
 
 ## Описание проекта
