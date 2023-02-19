@@ -18,7 +18,7 @@ from .serializers import (AdminUserEditSerializer, CategorySerializer,
                           GetTitleSerializer, GetTokenSerializer,
                           ReviewSerializer, UserSignupSerializer)
 from .utils import send_confirmation_code
-from reviews.models import Category, Genre, Review, Title, User
+from reviews.models import (Category, Genre, Review, Title, User)
 
 
 @api_view(['post'])
