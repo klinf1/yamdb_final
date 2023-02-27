@@ -67,4 +67,5 @@ docker-compose exec web python manage.py dumpdata > fixtures.json
 
 Соавтотры:
 https://github.com/VorVorsky
-https://github.com/OrdinaryWorker
+https://github.com/OrdinaryWorker 
+.
