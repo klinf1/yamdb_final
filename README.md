@@ -51,16 +51,16 @@ scp ./infra/docker-compose.yaml <ваш_username>@<ваш_сервер>:
 scp ./infra/nginx/default.conf <ваш_username>@<ваш_сервер>:/nginx/
 ```
 * Настроить .env файл, добавив в него следующую информацию и поместить его в директорию с docker-compose.yaml
-- DB_ENGINE=django.db.backends.postgresql
-- DB_NAME=postgres
-- POSTGRES_USER=postgres
-- POSTGRES_PASSWORD=postgres
-- DB_HOST=db
-- DB_PORT=5432
-- DJANGO_SECRET_KEY=секретный ключ Django
-- EMAIL_HOST_USER=адрес вашего google smtp сервера. Необходимо [настроить двухфакторную авторизацию](https://support.google.com/accounts/answer/185839#) и [подключить пароль приложения](https://support.google.com/accounts/answer/185833#)
-- EMAIL_HOST_PASSWORD=пароль приложения
-- EMAIL_PORT=587
+    - DB_ENGINE=django.db.backends.postgresql
+    - DB_NAME=postgres
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - DB_HOST=db
+    - DB_PORT=5432
+    - DJANGO_SECRET_KEY=секретный ключ Django
+    - EMAIL_HOST_USER=адрес вашего google smtp сервера. Необходимо [настроить двухфакторную авторизацию](https://support.google.com/accounts/answer/185839#) и [подключить пароль приложения](https://support.google.com/accounts/answer/185833#)
+    - EMAIL_HOST_PASSWORD=пароль приложения
+    - EMAIL_PORT=587
 * Внести изменение в репозиторий и сделать push (для активации деплоя)
 * После успешного деплоя подключиться к серверу 
 
