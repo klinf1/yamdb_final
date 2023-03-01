@@ -1,5 +1,10 @@
 ![workflow status](https://github.com/klinf1/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+Информация о проекте дополнительно доступна по адресу:
+```
+http://62.84.120.123/redoc/
+```
+
 ## Описание
 Проект YaMDb собирает отзывы пользователей на произведения. Произведения делятся на категории: «Книги», «Фильмы», «Музыка».
 Сами произведения в YaMDb не хранятся, здесь нельзя посмотреть фильм или послушать музыку.
@@ -45,6 +50,17 @@ sudo apt install docker.io
 scp ./infra/docker-compose.yaml <ваш_username>@<ваш_сервер>:
 scp ./infra/nginx/default.conf <ваш_username>@<ваш_сервер>:/nginx/
 ```
+* Настроить .env файл, добавив в него следующую информацию и поместить его в директорию с docker-compose.yaml
+- DB_ENGINE=django.db.backends.postgresql
+- DB_NAME=postgres
+- POSTGRES_USER=postgres
+- POSTGRES_PASSWORD=postgres
+- DB_HOST=db
+- DB_PORT=5432
+- DJANGO_SECRET_KEY=секретный ключ Django
+- EMAIL_HOST_USER=адрес вашего google smtp сервера. Необходимо [настроить двухфакторную авторизацию](https://support.google.com/accounts/answer/185839#) и [подключить пароль приложения](https://support.google.com/accounts/answer/185833#)
+- EMAIL_HOST_PASSWORD=пароль приложения
+- EMAIL_PORT=587
 * Внести изменение в репозиторий и сделать push (для активации деплоя)
 * После успешного деплоя подключиться к серверу 
 
@@ -67,5 +83,5 @@ docker-compose exec web python3 manage.py collectstatic --noinput
 
 
 Соавтотры:
-[Vitaly Gudkov](https://github.com/VorVorsky)
-[Gritsenko Sergei](https://github.com/OrdinaryWorker)
+* [Vitaly Gudkov](https://github.com/VorVorsky)
+* [Gritsenko Sergei](https://github.com/OrdinaryWorker)
